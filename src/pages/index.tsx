@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import {
-  Link as ChakraLink,
-  Image,
   GridItem,
   useColorModeValue,
 } from '@chakra-ui/react'
