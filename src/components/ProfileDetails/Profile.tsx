@@ -1,8 +1,7 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Heading, HStack, Image, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import RecentPayments from "./RecentPays";
-import { RootState } from "store/reducers";
-import { useSelector } from 'react-redux'
+
 
 interface ProfileDetail {
         agentname: string,
