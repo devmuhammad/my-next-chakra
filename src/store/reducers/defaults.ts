@@ -5,10 +5,10 @@ import {
 
 
   const initialState = {
-      allGradesNgn: [],
-      allPlansNgn: [],
-      appConfig : [],
-      allPlans: []
+      allGradesNgn: <any[]>[],
+      allPlansNgn: <any[]>[],
+      appConfig : <any[]>[],
+      allPlans: <any[]>[]
   };
 
 
@@ -33,9 +33,13 @@ import {
   };
 
   const getNgnPlans = (allPlans: any) => {
-    return allPlans.filter((country: any) => {
+    const plans = allPlans.filter((country: any) => {
         return country.country_id === 163;
-      });
+      })
+     
+    const allplan = [...new Map(plans.map((item: any) =>
+        [item['display_name'], item])).values()]
+      return allplan
   }
 
   const getNgnGrades = (configData:any) => {
@@ -47,6 +51,6 @@ import {
       const grades = gradeGroup.map((group: any) => group.grades);
       const allgrades = grades.flat().sort((a: any, b: any) => a.id - b.id);
 
-      return allgrades
+      return gradeGroup
   }
   export default DefaultsReducer;

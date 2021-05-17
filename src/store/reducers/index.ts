@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-// import PaymentReducer from './paymentDetails';
 import DefaultsReducer from './defaults';
 import PaymentReducer from './payments'
 

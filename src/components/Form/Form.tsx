@@ -1,9 +1,8 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FormControl,
   FormLabel,
   Text,
-  FormHelperText,
   Input,
   HStack,
   Heading,
@@ -44,8 +43,8 @@ export const ApplicationForm = (props: any) => {
   const [isLoading, setLoading] = useState(false)
   const [formError, setError] = useState('Invalid Input !')
   const [hasInvalid, setHasErr] = useState(false)
-  const [grades, setGrades] = useState([])
-  const [plans, setPlans] = useState([])
+  const [grades, setGrades] = useState<any[]>([])
+  const [plans, setPlans] = useState<any[]>([])
   const allGrades = useSelector((state: RootState) => state.defaults.allGradesNgn) 
   const allPlans = useSelector((state: RootState) => state.defaults.allPlansNgn)
   const agentDetails = useSelector((state: RootState) => state.payments.agentDetails)
@@ -182,7 +181,7 @@ export const ApplicationForm = (props: any) => {
         fw.customer.email = paymentDetails.email;
         fw.customer.phonenumber = paymentDetails.phone;
         fw.tx_ref = uuid()
-        fw.customizations.title = paymentDetails.subscription['display_name']+' plan'
+        fw.customizations.title = paymentDetails.subscription['display_name']+' Plan'
 
         handleFlutterPayment({
             callback: async(response) => {
@@ -313,7 +312,7 @@ export const ApplicationForm = (props: any) => {
           >
             {grades.map((grade:any) => (
             <option key={grade.id} value={JSON.stringify(grade)}>
-                {grade.display_name}
+                {grade.name}
             </option>))}
             
           </Select>

@@ -1,6 +1,6 @@
 ## ULESSON TELESALES AGENT PAY APP
 
-App was build with Next.js and chakra-ui with built-in TypeScript.
+App was built with Next.js and chakra-ui with built-in TypeScript.
 
 We are connecting the Next.js `_app.js` with `chakra-ui`'s Provider and theme so the pages can have app-wide dark/light mode. 
 We are also creating some components which shows the usage of `chakra-ui`'s style props.

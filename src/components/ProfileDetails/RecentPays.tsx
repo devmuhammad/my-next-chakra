@@ -12,7 +12,6 @@ const RecentPayments = (props: any) => {
   const { recentTx } = props
   const headCol = useColorModeValue("brand_purple.200", "brand_purple.100");
   const [payments, setPayments] = useState(recentTx);
-  // forceUpdate()
   useEffect(() => {
     setPayments(recentTx)
     return () => {

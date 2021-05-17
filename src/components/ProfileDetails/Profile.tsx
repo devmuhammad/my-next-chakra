@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Heading, HStack, Image, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import RecentPayments from "./RecentPays";
+import { motion } from "framer-motion";
 
 
 interface ProfileDetail {
@@ -24,6 +25,14 @@ const Profile = (props: any) => {
   return (
     <>
       <HStack spacing={5} py={3} alignItems="center">
+      <motion.div
+          transition={{ duration: 2.5 }}
+          animate={{
+            scale: [1, 2, 2, 1, 1],
+            rotate: [0, 0, 120, 120, 0],
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+        >
         <Image
           boxSize="100px"
           borderRadius="xl"
@@ -31,6 +40,7 @@ const Profile = (props: any) => {
           src="/images/avatars/avatar-2.png"
           alt="profile Image"
         />
+        </motion.div>
 
         <VStack spacing={1} alignItems="flex-start">
           <Heading fontSize="xl">{profileDetail.agentname}</Heading>
