@@ -4,7 +4,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
-import localforage from 'localforage';
+import * as localforage from 'localforage';
 
 const persistConfig = {
   key: 'ulessonTelesales',

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import {
   FormControl,
   FormLabel,
@@ -55,6 +55,7 @@ export const ApplicationForm = (props: any) => {
     (state: RootState) => state.payments.agentDetails
   );
   const [profileDet, setProfile] = useState(agentDetails);
+  const [,forceRender] = useReducer((s) => s+1, 0)
   const fw = FWConfig;
   const [paymentDetails, setDetails] = useState<PayDetails>({
     customer: "",
@@ -222,6 +223,7 @@ export const ApplicationForm = (props: any) => {
           setAgentDetail(agentDet);
           setLoading(false);
           showPaymentSuccessful();
+          forceRender()
           //   clearInputs()
           // transaction_id,tx_ref,amount,currency, send to backend for verification
           // const transactionVerified = await completeTransaction({
@@ -245,6 +247,7 @@ export const ApplicationForm = (props: any) => {
           agentDet.transactions = agentDet.recentTx.length;
           dispatch(UpdateAgentPayments(agentDet));
           setAgentDetail(agentDet);
+          forceRender()
           setLoading(false);
           showPaymentFailed();
         }

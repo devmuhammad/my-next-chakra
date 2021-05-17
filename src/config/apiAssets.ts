@@ -5,13 +5,14 @@ import environment from './environment';
 const { apiSignature,appToken,appBuildNumber  } = environment;
 
 const findOrCreateDeviceUuid = async() => {
-	const secureLocal = (await import('./securelocal')).default
-	let existingUuid = secureLocal.get('device-uuid');
+	// const secureLocal = (await import('./securelocal')).default
+	if (typeof window === 'undefined') return;
+	let existingUuid = localStorage.getItem('device-uuid');
 	if(existingUuid) {
 		return existingUuid;
 	} else {
 		let generatedUuid = uuid();
-		secureLocal.set('device-uuid', generatedUuid);
+		localStorage.setItem('device-uuid', generatedUuid);
 		return generatedUuid;
 	}
 }
