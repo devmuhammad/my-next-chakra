@@ -102,19 +102,19 @@ export const ApplicationForm = (props: any) => {
       })
   }
 
-  const clearInputs = () => {
-    clearRef.current!.value = ''
+  // const clearInputs = () => {
+  //   clearRef.current!.value = ''
 
-    // setDetails({
-    //     customer: '',
-    //     learner: '',
-    //     phone: '',
-    //     email: '',
-    //     grade_group:{},
-    //     subscription: {},
-    //     agent: '' 
-    // })
-  }
+  //   // setDetails({
+  //   //     customer: '',
+  //   //     learner: '',
+  //   //     phone: '',
+  //   //     email: '',
+  //   //     grade_group:{},
+  //   //     subscription: {},
+  //   //     agent: '' 
+  //   // })
+  // }
 
   const handleInputChange = (e:any) => {
     setHasErr(false)
