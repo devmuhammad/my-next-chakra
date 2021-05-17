@@ -1,4 +1,4 @@
-## ULESSON TELESALES AGENT PAY APP
+## PERSONAL NEXT CHAKRA BOILER
 
 App was built with Next.js and chakra-ui with built-in TypeScript.
 
