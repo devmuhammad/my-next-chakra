@@ -1,0 +1,41 @@
+{
+  "name": "telesales-portal",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.5",
+    "@chakra-ui/react": "^1.4.2",
+    "@chakra-ui/theme-tools": "1.1.2",
+    "@emotion/react": "11.1.5",
+    "@emotion/styled": "11.1.5",
+    "@fontsource/montserrat": "^4.3.0",
+    "@fontsource/mulish": "^4.3.0",
+    "flutterwave-react-v3": "^1.0.9",
+    "framer-motion": "^4.0.3",
+    "js-sha256": "^0.9.0",
+    "localforage": "^1.9.0",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.4",
+    "react-uuid": "^1.0.2",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-localstorage-simple": "^2.4.0",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "secure-ls": "^1.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "typescript": "4.2.3"
+  },
+  "license": "MIT"
+}
