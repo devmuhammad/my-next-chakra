@@ -48,8 +48,8 @@ import {
       });
       const gradeGroup = countryGroup[0].grade_groups;
 
-      const grades = gradeGroup.map((group: any) => group.grades);
-      const allgrades = grades.flat().sort((a: any, b: any) => a.id - b.id);
+      // const grades = gradeGroup.map((group: any) => group.grades);
+      // const allgrades = grades.flat().sort((a: any, b: any) => a.id - b.id);
 
       return gradeGroup
   }
